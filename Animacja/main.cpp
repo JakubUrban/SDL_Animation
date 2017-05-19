@@ -1,5 +1,6 @@
 #include <SDL.h>
 #include "Screen.h"
+#include "Particle.h"
 
 int main(int argc, char ** argv)
 {
@@ -7,6 +8,10 @@ int main(int argc, char ** argv)
 	Screen screen;
 
 	screen.Init();
+
+	Particle particles[100];
+
+	screen.SetPixel(799, 599, 0xffffff00);
 
 	//For closing detection
 	SDL_Event event;

@@ -20,7 +20,7 @@ public:
 	void Init();
 	void Close();
 	void Update();
-	void SetPixel();
+	void SetPixel(int x, int y, unsigned int color);
 };
 
 
