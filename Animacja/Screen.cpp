@@ -40,11 +40,12 @@ void Screen::Update()
 	SDL_RenderClear(renderer);
 	SDL_RenderCopy(renderer, texture, NULL, NULL);
 	SDL_RenderPresent(renderer);
+	SDL_memset(buffer1, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
 }
 //TODO set pixel
 void Screen::SetPixel(int x, int y, unsigned int color)
 {
-	if (x<SCREEN_WIDTH&&y<SCREEN_HEIGHT)
+	if (x<SCREEN_WIDTH&&x>=0&&y<SCREEN_HEIGHT&&y>=0)
 	{
 		buffer1[(y*SCREEN_WIDTH)+x] = color;
 	}
