@@ -2,4 +2,4 @@
 SDL Animation using pixel manipulation.
 
 
-![sdl animacja](https://cloud.githubusercontent.com/assets/24405506/26370892/79d01ce0-3ff9-11e7-8eae-991710720d16.jpg)
+![animacja01](https://cloud.githubusercontent.com/assets/24405506/26371188/4cc01cb8-3ffa-11e7-9442-07cc64540bc4.gif)
