@@ -1,15 +1,17 @@
 #pragma once
 
 #include<stdlib.h>
+#include<math.h>
 
 class Particle
 {
 private:
 	double x;
 	double y;
-	double x_speed;
-	double y_speed;
+	double speed;
 	unsigned int color;
+	double direction;
+	const double PI = 3.1415926535;
 
 public:
 	Particle();

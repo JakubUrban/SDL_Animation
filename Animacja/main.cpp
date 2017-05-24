@@ -9,11 +9,11 @@
 
 
 
-static const int NUMBER_OF_PARTICLES = 500;
+static const int NUMBER_OF_PARTICLES = 5000;
 
 int main(int argc, char ** argv)
 {
-
+	
 	srand(time(NULL));
 
 	Screen screen;

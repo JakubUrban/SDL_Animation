@@ -3,17 +3,15 @@
 
 Particle::Particle() :x(0), y(0),color(0xffffffff)
 {
-	x_speed = (rand() - (RAND_MAX / 2))*0.00001;
-	y_speed = (rand() - (RAND_MAX / 2))*0.00001;
+	speed = (double)rand() / RAND_MAX * 0.1;
+	
+	direction = ((double)rand() / RAND_MAX) * 2 * PI;
 }
 
 Particle::Particle(double x, double y)
 {
 	this->x = x;
 	this->y = y;
-
-	x_speed = (rand() - (RAND_MAX / 2))*0.00001;
-	y_speed = (rand() - (RAND_MAX / 2))*0.00001;
 }
 
 
@@ -44,11 +42,6 @@ void Particle::SetColor(unsigned char Red, unsigned char Green, unsigned char Bl
 
 void Particle::Update(int time)
 {
-	x += (time * x_speed);
-
-	y += (time * y_speed);
-
-	if (x >= 800 || x <= 0) { x_speed = (rand() - (RAND_MAX / 2))*0.00001; };
-	if (y >= 600 || y <= 0) { y_speed = (rand() - (RAND_MAX / 2))*0.00001; };
-
+	x += cos(direction)*speed*time;
+	y += sin(direction)*speed*time;
 }
